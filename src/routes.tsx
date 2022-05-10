@@ -4,13 +4,15 @@ import {
 } from "react-router-dom"
 
 import Home from "./pages/Home"
-import Admin from "./pages/Admin"
+import Products from "./pages/Products"
+import ProductDisplay from './pages/Products/ProductDisplay'
 
 const Routes = () => {
 	return(
 		<Switch>
 			<Route path="/" element={ <Home /> } />
-			<Route path="/admin" element={ <Admin /> } />
+			<Route path="/products" element={ <Products /> } />
+			<Route path="/products/:uuid" element={ <ProductDisplay /> } />
 		</Switch>
 	)
 }
