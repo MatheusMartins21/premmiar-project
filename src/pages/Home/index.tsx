@@ -10,6 +10,8 @@ import {
 	Flex,
 	Image,
 	Text,
+	Input,
+	Button
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
@@ -48,7 +50,15 @@ function Home() {
 								</AccordionButton>
 							</h2>
 							<AccordionPanel pb={4}>
-								Lorem
+								<Flex justifyContent='space-between'>
+									<Input width='8rem' placeholder='Mínimo' />
+									<Input width='8rem' placeholder='Máximo' />
+								</Flex>
+								<Flex pt='.5rem'>
+									<Button width='100%' bgColor='green.300' color='white' _hover={{ bgColor: 'green.400' }} _focus={{ border: 'none' }} _active={{ bgColor: 'green.500' }} >
+										APLICAR VALOR
+									</Button>
+								</Flex>
 							</AccordionPanel>
 						</AccordionItem>
 
