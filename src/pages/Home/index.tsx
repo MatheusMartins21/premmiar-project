@@ -66,7 +66,7 @@ function Home() {
 							<h2>
 								<AccordionButton _focus={{ boxShadow: 'none' }}>
 									<Box flex='1' textAlign='left'>
-										Armas
+										Times
 									</Box>
 									<AccordionIcon />
 								</AccordionButton>
@@ -80,7 +80,7 @@ function Home() {
 							<h2>
 								<AccordionButton _focus={{ boxShadow: 'none' }}>
 									<Box flex='1' textAlign='left'>
-										Skins
+										Categorias
 									</Box>
 									<AccordionIcon />
 								</AccordionButton>
@@ -98,9 +98,9 @@ function Home() {
 						<Box _hover={{ borderColor: 'blue.900', border: '2px' }} border='1px' borderRadius='.5rem' borderColor='blackAlpha.300' width='18rem' height='20rem' ml='4' mr='4' mb='8'>
 							<Link to="/products/3a7a4922-2ad7-4adc-a68d-c808b24782ae">
 							<Box p='5' height='10rem'>
-								<Image width='150' height='60px' display='block' mr='auto' ml='auto' src='https://static.wikia.nocookie.net/valorant/images/a/aa/Prime_Vandal.png' />
+								<Image height='100' display='block' mr='auto' ml='auto' src='https://d3ugyf2ht6aenh.cloudfront.net/stores/862/279/products/thumb-3161-07ca21906c145bc09115712480190573-1024-1024.jpg' />
 								<Box mt='5' p='5'>
-									<Text textAlign='left' color='blackAlpha.700' fontSize='md'>Vandal Sublime</Text>
+									<Text textAlign='left' color='blackAlpha.700' fontSize='md'>Uniforme Cincinnati Bengals</Text>
 								</Box>
 							</Box>
 							<Box p='12' height='10rem'>

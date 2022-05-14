@@ -6,12 +6,12 @@ import { MdKeyboardArrowDown } from 'react-icons/md'
 function Header() {
 	return (
 		<>
-		<Flex bg='blue.900' alignItems='center' height='6.5rem' color='white'>
+		<Flex bg='blue.800' alignItems='center' height='6.5rem' color='white'>
 			<Link to="/">
 				<Box p='5'>
 					<Flex flexDirection='column' alignItems='center'>
 						<Image boxSize='3rem' src={Logo} alt='Logo' />
-						<Heading p="1" size='md'>VALORANT SHOP</Heading>
+						<Heading p="1" size='md'>NFL SHOP</Heading>
 					</Flex>
 				</Box>
 			</Link>
@@ -38,13 +38,13 @@ function Header() {
 					as={Button} 
 					rightIcon={<MdKeyboardArrowDown />}
 				>
-					Armas
+					Times
 				</MenuButton>
 				<MenuList>
-					<MenuItem>Vandal</MenuItem>
-					<MenuItem>Phantom</MenuItem>
-					<MenuItem>Bulldog</MenuItem>
-					<MenuItem>Sheriff</MenuItem>
+					<MenuItem>Bengals</MenuItem>
+					<MenuItem>Chiefs</MenuItem>
+					<MenuItem>Rams</MenuItem>
+					<MenuItem>Dolphins</MenuItem>
 				</MenuList>
 			</Menu>
 
@@ -59,13 +59,12 @@ function Header() {
 					as={Button} 
 					rightIcon={<MdKeyboardArrowDown />}
 				>
-					Skins
+					Categorias
 				</MenuButton>
 				<MenuList>
-					<MenuItem>Sublime</MenuItem>
-					<MenuItem>Singularidade</MenuItem>
-					<MenuItem>Glitchpop</MenuItem>
-					<MenuItem>Saqueador</MenuItem>
+					<MenuItem>Uniformes</MenuItem>
+					<MenuItem>Bolas</MenuItem>
+					<MenuItem>Capacetes</MenuItem>
 				</MenuList>
 			</Menu>
 		</Flex>
