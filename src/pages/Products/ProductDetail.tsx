@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react'
 import { Link, useParams } from 'react-router-dom'
 
-function ProductDisplay() {
+function ProductDetail() {
 	const { uuid } = useParams();
 
 	return (

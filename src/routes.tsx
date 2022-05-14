@@ -5,14 +5,14 @@ import {
 
 import Home from "./pages/Home"
 import Products from "./pages/Products"
-import ProductDisplay from './pages/Products/ProductDisplay'
+import ProductDetail from './pages/Products/ProductDetail'
 
 const Routes = () => {
 	return(
 		<Switch>
 			<Route path="/" element={ <Home /> } />
 			<Route path="/products" element={ <Products /> } />
-			<Route path="/products/:uuid" element={ <ProductDisplay /> } />
+			<Route path="/products/:uuid" element={ <ProductDetail /> } />
 		</Switch>
 	)
 }
