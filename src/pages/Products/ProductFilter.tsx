@@ -6,9 +6,9 @@ import {
 } from '@chakra-ui/react'
 
 import ProductFilterAccordion from '../../components/ProductFilterAccordion'
-import ProductList from '../../containers/ProductList'
+import ProductFilterList from '../../containers/ProductFilterList'
 
-function Home() {
+function ProductFilter() {
 	return (
 		<>
 		<Grid 
@@ -22,7 +22,7 @@ function Home() {
 			<GridItem colSpan={3}>
 				<Box>
 					<Flex flexWrap='wrap'>
-						<ProductList />
+						<ProductFilterList />
 					</Flex>
 				</Box>
 			</GridItem>
@@ -31,4 +31,4 @@ function Home() {
 	)
 }
 
-export default Home;
+export default ProductFilter;

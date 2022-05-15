@@ -11,6 +11,8 @@ export interface IProduct {
   image: string;
   amount: number;
   discount: number;
+  team: string;
+  category: string;
   createdAt: Date;
 }
 
@@ -38,6 +40,13 @@ export const productReducer: Reducer<IProductState, ProductActions> = (
       return {
         products: action.products,
       }
+    };
+
+    case ProductActionTypes.FILTER: {
+      return {
+        ...state,
+        products: action.products,
+      };
     };
 
     default: 

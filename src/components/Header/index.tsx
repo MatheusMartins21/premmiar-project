@@ -1,5 +1,17 @@
-import { Flex, Box, Image, Heading, Input, Menu, MenuButton, Button, MenuList, MenuItem } from '@chakra-ui/react'
-import { Link } from 'react-router-dom'
+import { 
+	Flex, 
+	Box, 
+	Image, 
+	Heading, 
+	Input, 
+	Menu, 
+	MenuButton,
+	Button, 
+	MenuList, 
+	MenuItem, 
+	Link
+} from '@chakra-ui/react'
+import { Link as LinkRouter } from 'react-router-dom'
 import Logo from '../../assets/logo.svg'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 
@@ -7,14 +19,14 @@ function Header() {
 	return (
 		<>
 		<Flex bg='blue.800' alignItems='center' height='6.5rem' color='white'>
-			<Link to="/">
+			<LinkRouter to="/">
 				<Box p='5'>
 					<Flex flexDirection='column' alignItems='center'>
 						<Image boxSize='3rem' src={Logo} alt='Logo' />
 						<Heading p="1" size='md'>NFL SHOP</Heading>
 					</Flex>
 				</Box>
-			</Link>
+			</LinkRouter>
 			<Box p='10'>
 				<Input
 					placeholder='O que você está buscando?' 
@@ -41,10 +53,10 @@ function Header() {
 					Times
 				</MenuButton>
 				<MenuList>
-					<MenuItem>Bengals</MenuItem>
-					<MenuItem>Chiefs</MenuItem>
-					<MenuItem>Rams</MenuItem>
-					<MenuItem>Dolphins</MenuItem>
+					<Link href={`/products/team/bengals`}><MenuItem>Bengals</MenuItem></Link>
+					<Link href={`/products/team/chiefs`}><MenuItem>Chiefs</MenuItem></Link>
+					<Link href={`/products/team/rams`}><MenuItem>Rams</MenuItem></Link>
+					<Link href={`/products/team/dolphins`}><MenuItem>Dolphins</MenuItem></Link>
 				</MenuList>
 			</Menu>
 
@@ -62,9 +74,9 @@ function Header() {
 					Categorias
 				</MenuButton>
 				<MenuList>
-					<MenuItem>Uniformes</MenuItem>
-					<MenuItem>Bolas</MenuItem>
-					<MenuItem>Capacetes</MenuItem>
+					<Link href={`/products/category/uniformes`}><MenuItem>Uniformes</MenuItem></Link>
+					<Link href={`/products/category/bolas`}><MenuItem>Bolas</MenuItem></Link>
+					<Link href={`/products/category/capacetes`}><MenuItem>Capacetes</MenuItem></Link>
 				</MenuList>
 			</Menu>
 		</Flex>

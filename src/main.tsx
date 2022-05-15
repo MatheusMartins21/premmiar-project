@@ -18,10 +18,23 @@ createServer({
       image: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/862/279/products/thumb-3161-07ca21906c145bc09115712480190573-1024-1024.jpg',
       amount: 4000,
       discount: 75,
+      team: 'bengals',
+      category: 'uniformes',
       createdAt: new Date('2022-05-10 09:00:00'),
     });
-      
-        
+
+    server.create('product', {
+      uuid: 'fb20486f-c832-422d-af45-2097dfe244ee',
+      title: 'Uniforme Los Angeles Rams',
+      description: 'Uniforme Los Angeles Rams 100% Poliester',
+      image: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/43333dfa-7235-4a4d-b924-4fe3436f2284/jersey-de-f%C3%BAtbol-americano-game-nfl-los-angeles-chargers-keenan-allen-7bRg62.png',
+      amount: 4000,
+      discount: 75,
+      team: 'rams',
+      category: 'uniformes',
+      createdAt: new Date('2022-05-10 09:00:00'),
+    });
+    
     server.create('product', {
       uuid: '40d17fd8-fcff-46e7-8992-7b876caa0b62',
       title: 'Bola Futebol Americano',
@@ -29,16 +42,20 @@ createServer({
       image: 'https://images.lojanike.com.br/1024x1024/produto/bola-futebol-americano-nike-vapor-247-oficial-FT0268-211-1.png',
       amount: 5000,
       discount: 0,
+      team: '',
+      category: 'bolas',
       createdAt: new Date('2022-05-10 09:00:00'),
     });
 
     server.create('product', {
-      uuid: '41d17fd8-fcff-46e7-8992-7b876caa0b62',
+      uuid: 'da0b27ce-0a95-41b8-95ba-e47f21b535a9',
       title: 'Capacete Futebol Americano Riddell',
       description: 'Capacete de futebol americano Riddell SpeedFlex SEM Facemask',
       image: 'https://guerreirosdofa.com.br/image/cache/catalog/capacete-futebol-americano-riddell-speed-flex3-600x607.jpg',
       amount: 7000,
       discount: 25,
+      team: '',
+      category: 'capacetes',
       createdAt: new Date('2022-05-10 09:00:00'),
     });
   },

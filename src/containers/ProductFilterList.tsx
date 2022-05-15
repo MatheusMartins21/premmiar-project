@@ -1,21 +1,24 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { useParams } from 'react-router-dom'
 
-import { ProductShowcase } from '../../components/ProductShowcase'
+import { ProductShowcase } from '../components/ProductShowcase'
 
-import { IAppState } from '../../store/Store'
-import { IProduct } from '../../reducers/productReducer'
-import { getAllProducts } from '../../actions/ProductActions'
+import { IAppState } from '../store/Store'
+import { IProduct } from '../reducers/productReducer'
+import { getFilteredProducts } from '../actions/ProductActions'
 
 interface IProps {
-  getAllProducts: Function,
+  getFilteredProducts: Function,
 	products: IProduct[];
 }
 
-export const ProductList: React.FunctionComponent<IProps> = ({ getAllProducts, products }) => {
+export const ProductFilterList: React.FunctionComponent<IProps> = ({ getFilteredProducts, products }) => {
+  const { filterName, filterValue } = useParams();
+  
   React.useEffect(() => {
-		getAllProducts();
-	}, [getAllProducts]);
+		getFilteredProducts(filterName, filterValue);
+	}, [getFilteredProducts]);
 
   return (
     <>
@@ -49,8 +52,8 @@ const mapStateToProps = (store: IAppState) => {
 
 const mapDispatchToProps = (dispatch: any) => {
   return {
-    getAllProducts: () => dispatch(getAllProducts()),
+    getFilteredProducts: (filterName: string, filterValue: string) => dispatch(getFilteredProducts(filterName, filterValue)),
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductList)
+export default connect(mapStateToProps, mapDispatchToProps)(ProductFilterList)
