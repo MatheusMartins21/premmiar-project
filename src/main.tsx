@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { ChakraProvider } from '@chakra-ui/react'
+import { Provider } from 'react-redux'
+import { Store } from 'redux'
+import { ChakraProvider, propNames } from '@chakra-ui/react'
 import { createServer, Model } from 'miragejs'
-import App from './App'
-import './index.css'
 
 createServer({
   models: {
@@ -18,8 +18,17 @@ createServer({
           title: 'Uniforme Cincinnati Bengals',
           description: 'Uniforme Cincinnati Bengals 100% Poliester',
           image: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/862/279/products/thumb-3161-07ca21906c145bc09115712480190573-1024-1024.jpg',
-          amount: 4500,
-          discount: 25,
+          amount: 4000,
+          discount: 50,
+          createdAt: new Date('2022-05-10 09:00:00'),
+        },
+        {
+          uuid: '40d17fd8-fcff-46e7-8992-7b876caa0b62',
+          title: 'Bola Futebol Americano',
+          description: 'Bola Futebol Americano Nike Vapor 24/7 Oficial',
+          image: 'https://images.lojanike.com.br/1024x1024/produto/bola-futebol-americano-nike-vapor-247-oficial-FT0268-211-1.png',
+          amount: 5000,
+          discount: 0,
           createdAt: new Date('2022-05-10 09:00:00'),
         },
       ],
@@ -41,10 +50,29 @@ createServer({
   }
 })
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <ChakraProvider>
-      <App />
-    </ChakraProvider>
-  </React.StrictMode>
-)
+import configureStore, { IAppState } from './store/Store'
+import { getAllProducts } from './actions/ProductActions'
+
+import App from './App'
+import './index.css'
+
+interface IProps {
+  store: Store<IAppState>;
+}
+
+const store = configureStore();
+store.dispatch(getAllProducts());
+
+const Root: React.FC<IProps> = props => {
+  return (
+    <React.StrictMode>
+      <Provider store={props.store}>
+        <ChakraProvider>
+          <App />
+        </ChakraProvider>
+      </Provider>
+    </React.StrictMode>
+  );
+};
+
+ReactDOM.createRoot(document.getElementById('root')!).render(<Root store={store} />)
