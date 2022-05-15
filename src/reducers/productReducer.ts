@@ -32,7 +32,7 @@ export const productReducer: Reducer<IProductState, ProductActions> = (
         ...state,
         products: action.products,
       };
-    }
+    };
     default: 
       return state;
   }

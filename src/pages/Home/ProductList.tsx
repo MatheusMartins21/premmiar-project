@@ -23,7 +23,8 @@ class ProductList extends React.Component<IProps> {
             : product.amount;
 
           return (
-            <ProductShowcase 
+            <ProductShowcase
+              key={product.uuid}
               uuid={product.uuid}
               title={product.title}
               image={product.image}

@@ -42,7 +42,7 @@ export function ProductShowcase({uuid, title, image, amount, discountVisibility,
       </Box>
       <Box p='12' height='10rem'>
         <Text visibility={discountVisibility} textAlign='left' color='blackAlpha.700' fontSize='xl'>De {amount} pontos</Text>
-        <Text textAlign='left' color='gray.500' fontSize='2xl'>{calculatedAmount} pontos </Text>
+        <Text textAlign='left' color='gray.500' fontSize='2xl'>{calculatedAmount} pontos</Text>
       </Box>
       </Link>
     </Box>
