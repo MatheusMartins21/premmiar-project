@@ -25,7 +25,7 @@ export type ProductActions = IProductGetAllAction | IProductDetailAction;
 export const getAllProducts: ActionCreator<ThunkAction<Promise<any>, IProductState, null, IProductGetAllAction>> = () => {
   return async(dispatch: Dispatch) => {
     try {
-      const response = await api.get('/products');
+      const response = await api.get('/api/products');
       dispatch({
         products: response.data.products,
         type: ProductActionTypes.GET_ALL,
@@ -39,7 +39,7 @@ export const getAllProducts: ActionCreator<ThunkAction<Promise<any>, IProductSta
 export const getDetailProduct: ActionCreator<ThunkAction<Promise<any>, IProductState, null, IProductDetailAction>> = (uuid) => {
   return async(dispatch: Dispatch) => {
     try {
-      const response = await api.get('/products');
+      const response = await api.get('/api/products');
       const productDetail = response.data.products.filter((product: any) => product.uuid === uuid);
       dispatch({
         products: productDetail,
