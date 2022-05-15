@@ -61,7 +61,6 @@ interface IProps {
 }
 
 const store = configureStore();
-store.dispatch(getAllProducts());
 
 const Root: React.FC<IProps> = props => {
   return (

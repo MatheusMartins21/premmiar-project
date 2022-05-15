@@ -33,6 +33,13 @@ export const productReducer: Reducer<IProductState, ProductActions> = (
         products: action.products,
       };
     };
+
+    case ProductActionTypes.DETAIL: {
+      return {
+        products: action.products,
+      }
+    };
+
     default: 
       return state;
   }
