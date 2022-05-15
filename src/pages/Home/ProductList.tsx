@@ -22,7 +22,7 @@ export const ProductList: React.FunctionComponent<IProps> = ({ getAllProducts, p
       {products && products.map(product => {
         let discountVisibility: any = product.discount ? 'visibility' : 'hidden';
         let calculatedAmount: any = product.discount 
-          ? `Por ${product.amount * product.discount/100}`
+          ? `Por ${product.amount - (product.amount * (product.discount / 100))}`
           : product.amount;
 
         return (
