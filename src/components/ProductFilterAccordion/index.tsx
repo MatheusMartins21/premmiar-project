@@ -7,27 +7,16 @@ import {
   AccordionIcon,
 	Flex,
 	Input,
-	Button
+	Button,
+  List,
+  ListItem,
+  Link,
 } from '@chakra-ui/react'
 
 function ProductFilterAccordion() {
   return (
     <Box border='1px' borderRadius='.5rem' borderColor='blackAlpha.300'>
       <Accordion>
-        <AccordionItem borderRadius='.5rem' border='0'>
-          <h2>
-            <AccordionButton _focus={{ boxShadow: 'none' }}>
-              <Box flex='1' textAlign='left'>
-                Ordenação
-              </Box>
-              <AccordionIcon />
-            </AccordionButton>
-          </h2>
-          <AccordionPanel pb={4}>
-            Lorem
-          </AccordionPanel>
-        </AccordionItem>
-
         <AccordionItem>
           <h2>
             <AccordionButton _focus={{ boxShadow: 'none' }}>
@@ -60,7 +49,12 @@ function ProductFilterAccordion() {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            Lorem
+            <List>
+              <ListItem pt={1} pl={4}><Link href={`/products/team/bengals`}>Bengals</Link></ListItem>
+              <ListItem pt={1} pl={4}><Link href={`/products/team/chiefs`}>Chiefs</Link></ListItem>
+              <ListItem pt={1} pl={4}><Link href={`/products/team/rams`}>Rams</Link></ListItem>
+              <ListItem pt={1} pl={4}><Link href={`/products/team/dolphins`}>Dolphins</Link></ListItem>
+            </List>
           </AccordionPanel>
         </AccordionItem>
 
@@ -74,7 +68,11 @@ function ProductFilterAccordion() {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            Lorem
+            <List>
+              <ListItem pt={1} pl={4}><Link href={`/products/category/uniformes`}>Uniformes</Link></ListItem>
+              <ListItem pt={1} pl={4}><Link href={`/products/category/bolas`}>Bolas</Link></ListItem>
+              <ListItem pt={1} pl={4}><Link href={`/products/category/capacetes`}>Capacetes</Link></ListItem>
+            </List>
           </AccordionPanel>
         </AccordionItem>
       </Accordion>
