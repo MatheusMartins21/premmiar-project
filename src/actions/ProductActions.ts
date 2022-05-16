@@ -46,11 +46,7 @@ export const getFilteredProducts: ActionCreator<ThunkAction<Promise<any>, IProdu
   return async(dispatch: Dispatch) => {
     try {
       const response = await api.get('/api/products');
-      console.log(response)
       const filteredProducts = response.data.products.filter((product: any) => filterName == 'team' ? product.team === filterValue : product.category === filterValue);
-      console.log(filterName)
-      console.log(filterValue)
-      console.log(filteredProducts)
       dispatch({
         products: filteredProducts,
         type: ProductActionTypes.DETAIL,
