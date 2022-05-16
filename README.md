@@ -26,5 +26,6 @@ Front-end testing for Premmiar with React, Typescript, MirageJS and Chakra UI.
 - [x] Product List with State Control
 - [x] Product Detail with State Control
 - [x] Product Filter with State Control
+- [ ] Search Bar Filter with State Control
 - [ ] Product Value Filter with State Control
 - [ ] Crud Products
