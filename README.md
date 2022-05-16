@@ -9,8 +9,10 @@ Front-end testing for Premmiar with React, Typescript, MirageJS and Chakra UI.
 ![image](https://user-images.githubusercontent.com/33427278/168408332-e64657e6-e19a-47b1-8ce1-fd26d591785a.png)
 
 - /products/{uuid} - is a page for product detail.<br><br>
-![image](https://user-images.githubusercontent.com/33427278/168408352-fbbda3e2-71f4-450a-b80e-59a639699f5d.png)
+![image](https://user-images.githubusercontent.com/33427278/168500306-b686b32d-342a-4bda-92ca-f08f0f6ff77b.png)
 
+- /products/{filterName}/{filterValue} - is a products filter by 'team' and 'category'. <br><br>
+![image](https://user-images.githubusercontent.com/33427278/168500348-7bb6d50c-b3fb-4da2-8d28-e46f76157180.png)
 
 ## Installation
 - Execute the command `yarn` to install the dependencies.
@@ -20,6 +22,9 @@ Front-end testing for Premmiar with React, Typescript, MirageJS and Chakra UI.
 - [x] Dependency configuration
 - [x] Structure
 - [x] Application layout
-- [ ] Redux implementation
-- [ ] Componentization and code review
-- [ ] Tests
+- [x] Redux implementation with API
+- [x] Product List with State Control
+- [x] Product Detail with State Control
+- [x] Product Filter with State Control
+- [ ] Product Value Filter with State Control
+- [ ] Crud Products
